@@ -10,7 +10,7 @@ Cada writeup detalla el proceso completo: reconocimiento, enumeración, explotac
 
 | Total resueltas | Fáciles | Medias | Difíciles |
 |:-:|:-:|:-:|:-:|
-| 1 | 1 | 0 | 0 |
+| 2 | 2 | 0 | 0 |
 
 ---
 
@@ -19,6 +19,7 @@ Cada writeup detalla el proceso completo: reconocimiento, enumeración, explotac
 | Máquina | OS | Dificultad | Técnicas | Writeup |
 |---------|-----|------------|----------|---------|
 | [Cap](#) | Linux | 🟢 Fácil | IDOR, FTP credentials, Linux Capabilities | [📄 Ver](machines/Cap/writeup.md) |
+| [Reactor](#) | Linux | 🟢 Fácil | CVE-2025-66478 (Next.js RCE), SQLite credentials, Node.js Inspector | [📄 Ver](machines/Reactor/writeup.md) |
 
 ---
 
@@ -28,6 +29,9 @@ Cada writeup detalla el proceso completo: reconocimiento, enumeración, explotac
 - **Análisis de tráfico de red** (PCAP)
 - **Credenciales en texto claro** (FTP)
 - **Linux Capabilities** (`cap_setuid`)
+- **CVE-2025-66478** (Next.js RCE — Prototype Pollution en RSC)
+- **Node.js Inspector** (ejecución de código como root vía `--inspect`)
+- **Cracking de hashes MD5**
 
 ---
 
@@ -38,6 +42,9 @@ Cada writeup detalla el proceso completo: reconocimiento, enumeración, explotac
 - `tshark` / `wireshark` — análisis de tráfico
 - `whatweb` / `wappalyzer` — fingerprinting web
 - `getcap` — enumeración de capabilities
+- `sqlite3` — análisis de bases de datos
+- `john` — cracking de hashes
+- `python3` — desarrollo de exploits personalizados
 
 ---
 
